@@ -1,0 +1,18 @@
+
+## Navigation
+alias ..="cd .."
+alias cd..="cd .."
+
+## Applications
+alias g="git"
+alias v="vim"
+
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
+fi
+
+# Always enable color output on grep and ls
+alias ls="ls -F ${colorflag}"
+alias grep="grep --color=auto"
